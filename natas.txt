@@ -1,0 +1,70 @@
+Natas 2:    ZluruAthQk7Q2MqmDeTiUij2ZvWy2mBia
+Natas 3:    sJIJNW6ucpu6HPZ1ZAchaDtwd7oGrD14
+Natas 4:    Z9tkRkWmpt9Qr7XrR5jWRkgOU901swEZ
+
+####### robots.txt (always check just in case)
+
+Natas 5:    iX6IOfmpN7AYOQGPwtn3fXpbaJVJcHfq
+Natas 6:    aGoY4q2Dc6MgDq4oL4YtoKtyAg9PeHa1
+
+####### used cookies and console to get into this one
+
+Natas 7:    7z3hEENjQtflzgnT29q7wAvMNfZdh0i9 
+
+####### as in Natas 2. We had to navigate to a given file. 
+####### File was given to us in the source code via php however
+
+Natas 8:    DBfUBfqQG69KvJvJ1iAbMoIpwSNQ9bWe    
+#######used file path in php $PAGE variable
+
+Natas 9:    W0mMhUcRRnG8dcghE4qvk3JA9lGt8nDl    
+####### Provide correctly decoded string from a given encoded string
+####### Script created called natas8.php to simplify this specific 
+####### scenario
+####### echo 3d3d516343746d4d6d6c315669563362 | xxd -r -p | rev | base64 -d
+####### This bash command also solves the problem
+
+Natas 10:   nOpp1igQAkUzaI1GUUjzn1bFVj7xCNzu
+####### Used command injection and path traversal to display the pw
+####### ; cat ../../../../../etc/natas_webpass/natas10
+
+Natas 11:   U82q5TCMMQ9xuFoI3dYX61s7OZD9JKoK
+####### Same as Natas 10, except you cannot use the ; or & characters
+####### Used one of many others options ($)
+####### Also of note you can search for . (meaning any file) and 
+####### add the natas pw file path after since grep can search multiple
+####### files. Using # at the end of this will ignore anything after.
+
+Natas 12:   EDXp0pS26wLKHZy1rDBPUZk0RKfLGIR3
+####### Reverse engineered the xor_encrypt function. Passed it the $defaultdata
+####### array and used it and base64_decode to get the needed key.
+####### Replaced key with correct key and then ran the saveData function again.
+####### This time passing the array to set show password = yes as the argument.
+####### Once this ran we got the correctly encoded code and changed the cookie
+####### to have the website load with password showing.
+
+Natas 13:   jmLTY0qiPZBbaKc9341cqPQZBJv7MQbY
+####### Uploaded a php file after changing the html to force a .php extension 
+####### instead of a .jpg extension. Simply used the F12 tools to do so.
+
+Natas 14:   Lg96M10TdfaPyVBkJdjymbllQ5L6qdl1
+####### Essentially the same as Natas 13. Difference is they added a check
+####### in exif_imagegype that checks the first few bytes of a file to ensure
+####### it is indeed an accepted type. Used the same file as previously, but
+####### used hexedit to edit the first few bytes to spoof a JPG file
+
+Natas 15:   AwWj0w5cvxrZiONgZ9J5stNVkmxdk39J
+####### Had to pay attention to the code. We find out that we can use a debug
+####### flag in the url to see some debugging info. Passing a username and pw
+####### along with debug in the url gives us the info. Now we test by adding an
+####### extra quotation in the url. This throws another error, but doesn't deny
+####### us outright. We gather that it expects the answer 1 for mysql_num_rows.
+####### Basically we need to set that to always be True (or 1). We do this by
+####### adding an OR 1=1 to both the username and pw fields. This returns out
+####### needed password for the next test.
+
+Natas 16:   WaIHEacj63wnNIBROHeqi3p9t0m5nhmh
+
+Natas 17:   8Ps3H0GWbn5rd9S7GmAdgQNdkhPkq9cw
+
+Natas 18:   xvKIqDjy4OPv7wCRgDlmj0pFsCsDjhdP
